@@ -29,7 +29,7 @@ export const BgImage = styled.div`
   }
 `;
 
-export const StyledWhiteLogo = styled.img.attrs({ src: WhiteLogo })`
+export const StyledWhiteLogo = styled.img.attrs({ src: WhiteLogo, alt: 'Logo do Meu Banco' })`
   position: absolute;
   top: 42px;
   left: 32px;
@@ -37,7 +37,7 @@ export const StyledWhiteLogo = styled.img.attrs({ src: WhiteLogo })`
     display: none;
   }
 `;
-export const StyledGreenLogo = styled.img.attrs({ src: GreenLogo })`
+export const StyledGreenLogo = styled.img.attrs({ src: GreenLogo, alt: 'Logo do Meu Banco' })`
   margin: 16px 0 32px;
   @media (min-width: 993px) {
     display: none;
