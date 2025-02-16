@@ -14,28 +14,31 @@ export const BgImage = styled.div`
   background-image: url(${bgImage});
   background-size: cover;
   background-position: top;
-  max-width: 800px;
   width: 40%;
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     width: 55%;
   }
   @media (max-width: 992px) {
     display: none;
   }
+  @media (max-width: 2200px) {
+    max-width: 800px;
+  }
+  @media (min-width: 2200px) {
+    max-width: 1600px;
+  }
 `;
 
-export const Logo = styled.img`
+export const StyledWhiteLogo = styled.img.attrs({ src: WhiteLogo })`
   position: absolute;
   top: 42px;
   left: 32px;
-`
-
-export const StyledWhiteLogo = styled(Logo).attrs({ src: WhiteLogo })`
   @media (max-width: 992px) {
     display: none;
   }
 `;
-export const StyledGreenLogo = styled(Logo).attrs({ src: GreenLogo })`
+export const StyledGreenLogo = styled.img.attrs({ src: GreenLogo })`
+  margin: 16px 0 32px;
   @media (min-width: 993px) {
     display: none;
   }

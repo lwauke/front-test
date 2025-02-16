@@ -18,8 +18,14 @@ const GlobalStyle = createGlobalStyle`
   .green {
     color: #1BC681;
   }
+  .blue {
+    color: #43B7FF;
+  }
   a {
     text-decoration: none;
+  }
+  .w-600 {
+    font-weight: 600;
   }
 `;
 
