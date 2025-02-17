@@ -9,6 +9,7 @@ export const StyledGreenLogo = styled.img.attrs({ src: GreenLogo, alt: 'Logo do 
 export const StyledSidebar = styled.aside`
   background: #fff;
   position: relative;
+  grid-row: 1 / 3;
 `
 
 export const Nav = styled.nav`

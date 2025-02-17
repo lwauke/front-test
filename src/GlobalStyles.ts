@@ -27,6 +27,9 @@ const GlobalStyle = createGlobalStyle`
   .w-600 {
     font-weight: 600;
   }
+  .relative {
+    position: relative;
+  }
 `;
 
 export default GlobalStyle;
