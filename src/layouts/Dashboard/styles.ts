@@ -11,4 +11,5 @@ export const Container = styled.div`
 export const StyledMain = styled.main`
   width: 90%;
   margin: 0 auto;
+  padding-top: 28px;
 `
