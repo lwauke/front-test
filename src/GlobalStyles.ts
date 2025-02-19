@@ -11,6 +11,17 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     color: #484848;
   }
+  h1, h2, h3, h4, h5, h6, p, img, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  ol, ul {
+    list-style: none;
+  }
   body {
     margin: 0;
     padding: 0;
