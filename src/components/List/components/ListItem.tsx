@@ -8,7 +8,7 @@ export interface ListItemProps {
   amount: string;
 }
 
-function ListItem({ id, paymentMethod, store, amount }: ListItem) {
+function ListItem({ id, paymentMethod, store, amount }: ListItemProps) {
   const paymentMethodLabel =
     paymentMethod === PaymentMethods.CREDIT_CARD ? "crédito" : "débito";
   return (

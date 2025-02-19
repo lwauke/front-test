@@ -9,8 +9,8 @@ interface ProgressBarProps {
 function ProgressBar({ progress, total, $width }: ProgressBarProps) {
   const percentage = (progress / total) * 100;
   return (
-    <ProgressBarContainer $width={$width}>
-      <StyledProgressBar progress={percentage} />
+    <ProgressBarContainer $width={$width} data-testid="progress-bar-container">
+      <StyledProgressBar progress={percentage} data-testid="progress-bar" />
     </ProgressBarContainer>
   );
 }

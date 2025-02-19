@@ -6,7 +6,7 @@ interface SearchIputProps {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-function SearchInput({ onChange }: SearchIputProps) {
+function SearchInput({ onChange = () => {} }: SearchIputProps) {
   return (
     <div className="relative">
       <StyledIcon src={SearchIcon} alt="Ícone de busca" />

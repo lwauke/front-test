@@ -6,7 +6,11 @@ export default {
   moduleNameMapper: {
     "\\.(css|less|sass|scss)$": "identity-obj-proxy",
     "^.+\\.svg$": "jest-transformer-svg",
-    "^@/(.*)$": "/src/$1",
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  globals: {
+    Uint8Array,
+  },
+  // transformIgnorePatterns: [`/node_modules/(?!${esModules})`],
 };
