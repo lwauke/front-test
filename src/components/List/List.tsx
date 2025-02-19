@@ -12,7 +12,7 @@ function List({ items, title }: ListProps) {
       <StyledHeader>{title}</StyledHeader>
       <ul>
         {items.map((item) => (
-          <ListItem {...item} />
+          <ListItem {...item} key={item.id} />
         ))}
       </ul>
     </div>
