@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const StyledBankCard = styled.div`
   width: 240px; 
   min-height: 140px;
-  background: linear-gradient(0.61turn, #1bc681, #0d603f);
+  background: linear-gradient(248.54deg, #1BC681 1.38%, #0D603F 89.61%);
+  box-sizing: border-box;
   border-radius: 8px;
   padding: 10px 16px;
   color: #fff;
