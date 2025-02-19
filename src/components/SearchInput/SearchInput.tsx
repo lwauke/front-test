@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import { StyledIcon, StyledSearchInput } from "./styles";
-import SearchIcon from "../../assets/search-icon.svg"
+import SearchIcon from "@/assets/search-icon.svg"
 
 interface SearchIputProps {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
