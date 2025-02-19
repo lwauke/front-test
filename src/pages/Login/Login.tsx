@@ -81,11 +81,11 @@ function Login() {
             <span className="w-600">
               <input
                 type="checkbox"
-                name=""
-                id=""
                 onChange={handleRemeberCredentialsChange}
+                data-testid="keep-logged"
+                aria-label="Lembrar dispositivo"
               />
-              Lembrar dispositivo
+              <span>Lembrar dispositivo</span>
             </span>
             <a href="/" className="blue">
               Esqueceu a senha?

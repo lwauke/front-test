@@ -11,8 +11,8 @@ interface FormGroupProps {
 function FormGroup({ label, type, className, onChange }: FormGroupProps) {
   return (
     <div className={className}>
-      <Label>{label}</Label>
-      <Input type={type} onChange={onChange} />
+      <Label id={label}>{label}</Label>
+      <Input type={type} onChange={onChange} aria-labelledby={label} />
     </div>
   );
 }
