@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledBankCard = styled.div`
-  width: 240px; 
+  width: 240px;
   min-height: 140px;
-  background: linear-gradient(248.54deg, #1BC681 1.38%, #0D603F 89.61%);
+  background: linear-gradient(248.54deg, #1bc681 1.38%, #0d603f 89.61%);
   box-sizing: border-box;
   border-radius: 8px;
   padding: 10px 16px;
@@ -35,4 +35,4 @@ export const StyledCardNumber = styled.p`
 export const StyledFooter = styled.div`
   display: flex;
   justify-content: space-between;
-`
+`;

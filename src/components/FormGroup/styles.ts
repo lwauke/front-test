@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
 
 export const Input = styled.input`
   border: 2px solid #d2d2d2;

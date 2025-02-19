@@ -31,8 +31,13 @@
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+    "import/no-unresolved": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off", //to do: reactivate this rule
     "import/extensions": [
-      "error",
+      "off",
       "ignorePackages",
       {
         "js": "never",
@@ -42,7 +47,7 @@
       }
     ],
     "import/no-extraneous-dependencies": [
-      "error",
+      "off",
       {
         "devDependencies": ["**/*.test.tsx", "**/*.test.ts"]
       }

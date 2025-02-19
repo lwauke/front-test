@@ -5,4 +5,4 @@ export const StyledCardContent = styled.div`
   flex-direction: column;
   height: 100%;
   align-items: start;
-`
+`;

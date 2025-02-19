@@ -6,10 +6,10 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   color: #fff;
-`
+`;
 
 export const StyledNotificationContainer = styled.div`
   flex-grow: 1;
   text-align: right;
   margin-right: 10px;
-`
+`;

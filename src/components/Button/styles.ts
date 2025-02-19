@@ -1,7 +1,7 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
 
 export const StyledButton = styled.button`
-  background-color: #1BC681;
+  background-color: #1bc681;
   width: 100%;
   height: 38px;
   box-sizing: border-box;
@@ -11,6 +11,6 @@ export const StyledButton = styled.button`
   border: none;
   cursor: pointer;
   :active {
-    border: initial // provides keyboard accessibility when navigating with tab key
+    border: initial; // provides keyboard accessibility when navigating with tab key
   }
 `;

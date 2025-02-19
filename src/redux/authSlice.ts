@@ -9,22 +9,27 @@ interface AuthState {
 
 const initialState: AuthState = {
   token: localStorage.getItem("token") || sessionStorage.getItem("token"),
-  username: localStorage.getItem("username") || sessionStorage.getItem("username"),
+  username:
+    localStorage.getItem("username") || sessionStorage.getItem("username"),
   rememberCredentials: !!localStorage.getItem("token")?.length,
 };
 
-const storeCredentials = ({ token, username, rememberCredentials }: AuthState) => {
+const storeCredentials = ({
+  token,
+  username,
+  rememberCredentials,
+}: AuthState) => {
   if (!token || !username) {
-    throw new Error('Token and username are required');
+    throw new Error("Token and username are required");
   }
   if (rememberCredentials) {
-    localStorage.setItem('token', token);
-    localStorage.setItem('username', username);
+    localStorage.setItem("token", token);
+    localStorage.setItem("username", username);
     return;
   }
-  sessionStorage.setItem('token', token);
-  sessionStorage.setItem('username', username);
-}
+  sessionStorage.setItem("token", token);
+  sessionStorage.setItem("username", username);
+};
 
 const authSlice = createSlice({
   name: "auth",
@@ -36,10 +41,12 @@ const authSlice = createSlice({
       storeCredentials(action.payload);
     },
     logout: (state) => {
+      /* eslint-disable no-param-reassign */
       state.token = null;
       state.username = null;
       localStorage.clear();
       sessionStorage.clear();
+      /* eslint-enable no-param-reassign */
     },
   },
 });

@@ -5,11 +5,10 @@ function Help() {
   return (
     <HelpContainer>
       <HelpTitle>Precisa de ajuda?</HelpTitle>
-      <HelpParagraph>Fale com um dos 
-      nossos especialistas</HelpParagraph>
+      <HelpParagraph>Fale com um dos nossos especialistas</HelpParagraph>
       <Button text="CONTATAR" />
     </HelpContainer>
   );
 }
 
-export default Help
+export default Help;

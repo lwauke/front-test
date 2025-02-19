@@ -6,17 +6,17 @@ interface ListProps {
   title: string;
 }
 
-function List ({ items, title }: ListProps) {
+function List({ items, title }: ListProps) {
   return (
     <div>
       <StyledHeader>{title}</StyledHeader>
       <ul>
         {items.map((item) => (
-          <ListItem {...item}/>
+          <ListItem {...item} />
         ))}
       </ul>
     </div>
   );
-};
+}
 
 export default List;

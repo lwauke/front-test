@@ -1,13 +1,13 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 interface Credentials {
   username: string;
   password: string;
-};
+}
 
 interface LoginResponse {
   token: string;
-};
+}
 
 export const api = createApi({
   reducerPath: "api",
@@ -21,6 +21,6 @@ export const api = createApi({
       }),
     }),
   }),
-})
+});
 
 export const { useLoginMutation } = api;

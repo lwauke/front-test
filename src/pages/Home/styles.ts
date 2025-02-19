@@ -6,4 +6,4 @@ export const HomeContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-`
+`;

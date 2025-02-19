@@ -5,10 +5,12 @@ interface CardFooterProps {
   description?: string;
 }
 function CardFooter({ mainText, description }: CardFooterProps) {
-  return <>
-    <StyledDescription>{description}</StyledDescription>
-    <StyledMainText>{mainText}</StyledMainText>
-  </>
+  return (
+    <>
+      <StyledDescription>{description}</StyledDescription>
+      <StyledMainText>{mainText}</StyledMainText>
+    </>
+  );
 }
 
 export default CardFooter;

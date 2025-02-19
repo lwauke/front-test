@@ -9,14 +9,17 @@ export interface ListItemProps {
 }
 
 function ListItem({ id, paymentMethod, store, amount }: ListItem) {
-  const paymentMethodLabel = paymentMethod === PaymentMethods.CREDIT_CARD ? 'crédito' : 'débito';
-  return <StyledListItem key={id}>
-    <div>
-      <p>{store}</p>
-      <span>Compra no {paymentMethodLabel}</span>
-    </div>
-    <span className="green">{amount}</span>
-  </StyledListItem>;
+  const paymentMethodLabel =
+    paymentMethod === PaymentMethods.CREDIT_CARD ? "crédito" : "débito";
+  return (
+    <StyledListItem key={id}>
+      <div>
+        <p>{store}</p>
+        <span>Compra no {paymentMethodLabel}</span>
+      </div>
+      <span className="green">{amount}</span>
+    </StyledListItem>
+  );
 }
 
 export default ListItem;

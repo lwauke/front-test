@@ -23,8 +23,8 @@ function BankCard({ cardNumber, fullName, validity }: BankCardProps) {
       <StyledChipIcon src={ChipIcon} alt="Ícone de chip" />
       <StyledContactlessIcon src={ContactlessIcon} alt="Ícone de contactless" />
       <StyledCardNumber>
-        {splitCardNumber.map((part, index) => (
-          <span key={index}>{part}</span>
+        {splitCardNumber.map((part) => (
+          <span key={part}>{part}</span>
         ))}
       </StyledCardNumber>
       <StyledFooter>

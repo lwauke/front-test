@@ -8,10 +8,12 @@ interface NavItemProps {
 }
 function NavItem({ text, path, iconPath, iconAlt }: NavItemProps) {
   const hasIcon = iconPath && iconAlt;
-  return <StyledNavItem to={path}>
-    { hasIcon ? <img src={iconPath} alt={iconAlt} /> : null }
-    {text}
-  </StyledNavItem>
+  return (
+    <StyledNavItem to={path}>
+      {hasIcon ? <img src={iconPath} alt={iconAlt} /> : null}
+      {text}
+    </StyledNavItem>
+  );
 }
 
 export default NavItem;

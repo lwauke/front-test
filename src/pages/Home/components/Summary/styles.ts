@@ -16,4 +16,4 @@ export const SummaryContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 }
-`
+`;

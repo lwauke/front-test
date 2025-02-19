@@ -12,9 +12,9 @@ function FormGroup({ label, type, className, onChange }: FormGroupProps) {
   return (
     <div className={className}>
       <Label>{label}</Label>
-      <Input type={type} onChange={onChange}/>
+      <Input type={type} onChange={onChange} />
     </div>
-  )
+  );
 }
 
-export default FormGroup; 
+export default FormGroup;

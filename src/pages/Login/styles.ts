@@ -1,9 +1,9 @@
-import { styled } from 'styled-components';
-import bgImage from '../../assets/woman-bg.jpg'
-import FormGroup from '@/components/FormGroup/FormGroup';
-import Button from '@/components/Button/Button';
-import WhiteLogo from '../../assets/white-logo.svg'
-import GreenLogo from '../../assets/green-logo.svg'
+import { styled } from "styled-components";
+import bgImage from "../../assets/woman-bg.jpg";
+import FormGroup from "@/components/FormGroup/FormGroup";
+import Button from "@/components/Button/Button";
+import WhiteLogo from "../../assets/white-logo.svg";
+import GreenLogo from "../../assets/green-logo.svg";
 
 export const Container = styled.div`
   display: flex;
@@ -29,7 +29,10 @@ export const BgImage = styled.div`
   }
 `;
 
-export const StyledWhiteLogo = styled.img.attrs({ src: WhiteLogo, alt: 'Logo do Meu Banco' })`
+export const StyledWhiteLogo = styled.img.attrs({
+  src: WhiteLogo,
+  alt: "Logo do Meu Banco",
+})`
   position: absolute;
   top: 42px;
   left: 32px;
@@ -37,7 +40,10 @@ export const StyledWhiteLogo = styled.img.attrs({ src: WhiteLogo, alt: 'Logo do 
     display: none;
   }
 `;
-export const StyledGreenLogo = styled.img.attrs({ src: GreenLogo, alt: 'Logo do Meu Banco' })`
+export const StyledGreenLogo = styled.img.attrs({
+  src: GreenLogo,
+  alt: "Logo do Meu Banco",
+})`
   margin: 16px 0 32px;
   @media (min-width: 993px) {
     display: none;
@@ -54,7 +60,7 @@ export const Paragraph = styled.p`
   font-size: 24px;
   font-weight: 300;
   color: #484848;
-`
+`;
 
 export const FormContainer = styled.div`
   flex-grow: 1;
@@ -71,12 +77,12 @@ export const Form = styled.form`
 export const FormOptions = styled.div`
   display: flex;
   justify-content: space-between;
-`
+`;
 
 export const StyledPasswordFormGroup = styled(FormGroup)`
   margin: 4px 0 12px 0;
-`
+`;
 
 export const StyledButton = styled(Button)`
   margin: 12px 0 16px 0;
-`
+`;
