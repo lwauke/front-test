@@ -10,24 +10,24 @@ function Purchases() {
     {
       id: 1,
       paymentMethod: PaymentMethods.CREDIT_CARD,
-      store: 'Store A',
-      amount: 'R$ 100,00',
+      store: "Store A",
+      amount: "R$ 100,00",
     },
     {
       id: 2,
       paymentMethod: PaymentMethods.DEBIT_CARD,
-      store: 'Store B',
-      amount: 'R$ 100,00',
+      store: "Store B",
+      amount: "R$ 100,00",
     },
     {
       id: 3,
       paymentMethod: PaymentMethods.CREDIT_CARD,
-      store: 'Store C',
-      amount: 'R$ 100,00',
+      store: "Store C",
+      amount: "R$ 100,00",
     },
   ];
   return (
-    <Card>
+    <Card as="section">
       <StyledHeader>Últimas compras</StyledHeader>
       <List title="03/12" items={mockItems} />
       <List title="05/12" items={mockItems} />

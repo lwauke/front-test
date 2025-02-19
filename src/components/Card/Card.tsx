@@ -1,16 +1,13 @@
-import React from 'react';
-import { CardContainer } from './styles';
+import { JSX } from "react";
+import { CardContainer } from "./styles";
 
 interface CardProps {
-  children:  React.ReactNode;
+  children: React.ReactNode;
+  as?: keyof JSX.IntrinsicElements;
 }
 
-function Card ({ children }: CardProps) {
-  return (
-    <CardContainer>
-      { children }
-    </CardContainer>
-  );
-};
+function Card({ children, as }: CardProps) {
+  return <CardContainer as={as}>{children}</CardContainer>;
+}
 
 export default Card;
