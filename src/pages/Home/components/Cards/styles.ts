@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { CardContainer } from "@/components/Card/styles";
-import ProgressBar from "@/components/ProgressBar/ProgressBar";
-import { StyledProgressBar } from "@/components/ProgressBar/styles";
 import Button from "@/components/Button/Button";
 
 export const StyledCardsContainer = styled(CardContainer).attrs({
@@ -32,7 +30,7 @@ export const StyledMonthlyLimit = styled.div`
 export const StyledCardsDetails = styled.div`
   display: flex;
   flex-direction: column;
-  height: 120px;
+  min-height: 120px;
   font-size: 16px;
   font-weight: 300;
   margin: auto 0;
@@ -48,8 +46,9 @@ export const StyledLastPurchase = styled.div`
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const StyledDetailsButton = styled(Button)`
-  min-width: 170px;
+  height: auto;
 `;

@@ -4,11 +4,15 @@ import {
   StyledChipIcon,
   StyledContactlessIcon,
   StyledFooter,
+  StyledFullName,
   StyledLogoIcon,
+  StyledValidity,
+  StyledValidityContainer,
 } from "./styles";
 import ChipIcon from "@/assets/chip-icon.svg";
 import ContactlessIcon from "@/assets/contactless-icon.svg";
 import WhiteLogo from "@/assets/white-logo.svg";
+import { StyledMastercard } from "../Mastercard/styles";
 
 interface BankCardProps {
   cardNumber: string;
@@ -28,8 +32,12 @@ function BankCard({ cardNumber, fullName, validity }: BankCardProps) {
         ))}
       </StyledCardNumber>
       <StyledFooter>
-        <span>{fullName}</span>
-        <span>{validity}</span>
+        <StyledFullName>{fullName}</StyledFullName>
+        <StyledValidityContainer>
+          <span>Validade</span>
+          <StyledValidity>{validity}</StyledValidity>
+        </StyledValidityContainer>
+        <StyledMastercard />
       </StyledFooter>
     </StyledBankCard>
   );

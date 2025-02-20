@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledBankCard = styled.div`
   width: 240px;
   min-height: 140px;
+  font-family: "JetBrains Mono";
   background: linear-gradient(248.54deg, #1bc681 1.38%, #0d603f 89.61%);
   box-sizing: border-box;
   border-radius: 8px;
@@ -27,6 +28,7 @@ export const StyledContactlessIcon = styled.img`
 
 export const StyledCardNumber = styled.p`
   margin: 16px 0;
+  font-size: 14px;
   & span {
     margin-right: 8px;
   }
@@ -35,4 +37,19 @@ export const StyledCardNumber = styled.p`
 export const StyledFooter = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+`;
+
+export const StyledFullName = styled.span`
+  font-size: 12px;
+`;
+
+export const StyledValidityContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 6px;
+`;
+
+export const StyledValidity = styled.span`
+  font-size: 9px;
 `;

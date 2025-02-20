@@ -23,7 +23,7 @@ function Cards() {
       <StyledSubtitle>Cartões</StyledSubtitle>
       <BankCard
         cardNumber="1234123412341234"
-        fullName="Daniele da silva"
+        fullName="Tide Cardoso"
         validity="12/32"
       />
       <StyledCardsDetails>

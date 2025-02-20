@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TABLET_BREAKPOINT } from "../../styles";
 
 export const SummaryContainer = styled.div`
   display: grid;
@@ -14,7 +15,7 @@ export const SummaryContainer = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width: 1201px) {
+  @media (min-width: ${TABLET_BREAKPOINT}) {
     grid-column: 1 / 3;
   }
 `;
