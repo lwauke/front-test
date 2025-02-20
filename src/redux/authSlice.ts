@@ -36,12 +36,12 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     setCredentials: (state, action: PayloadAction<AuthState>) => {
+      /* eslint-disable no-param-reassign */
       state.token = action.payload.token;
       state.username = action.payload.username;
       storeCredentials(action.payload);
     },
     logout: (state) => {
-      /* eslint-disable no-param-reassign */
       state.token = null;
       state.username = null;
       localStorage.clear();

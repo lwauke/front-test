@@ -4,7 +4,6 @@ import {
   StyledCardsContainer,
   StyledCardsDetails,
   StyledDetailsButton,
-  StyledLastPurchase,
   StyledLimit,
   StyledMonthlyLimit,
   StyledSubtitle,

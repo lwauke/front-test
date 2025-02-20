@@ -1,6 +1,5 @@
 import Button from "@/components/Button/Button";
 import { HelpContainer, HelpTitle, HelpParagraph } from "./styles";
-import { theme } from "@/styles/theme";
 
 function Help() {
   return (

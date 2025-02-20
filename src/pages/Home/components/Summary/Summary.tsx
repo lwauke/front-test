@@ -1,5 +1,4 @@
 import Card from "@/components/Card/Card";
-import CardContent from "@/components/Card/components/CardContent/CardContent";
 import CardFooter from "@/components/Card/components/CardFooter/CardFooter";
 import CardHeader from "@/components/Card/components/CardHeader/CardHeader";
 import { SummaryContainer, StyledSummaryCard, StyledPlusIcon } from "./styles";
