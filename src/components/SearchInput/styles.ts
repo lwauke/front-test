@@ -9,7 +9,10 @@ export const StyledSearchInput = styled.input`
   padding: 8px;
   padding-left: 32px;
   box-sizing: border-box;
-  color: inherit;
+  &,
+  &::placeholder {
+    color: inherit;
+  }
 `;
 
 export const StyledIcon = styled.img`

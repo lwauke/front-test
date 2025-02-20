@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SummaryContainer = styled.div`
-  grid-column: 1 / 3;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
@@ -15,5 +14,7 @@ export const SummaryContainer = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+  @media (min-width: 1201px) {
+    grid-column: 1 / 3;
+  }
 `;

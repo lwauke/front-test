@@ -10,7 +10,7 @@ function SearchInput({ onChange = () => {} }: SearchIputProps) {
   return (
     <div className="relative">
       <StyledIcon src={SearchIcon} alt="Ícone de busca" />
-      <StyledSearchInput type="text" onChange={onChange} />
+      <StyledSearchInput type="text" onChange={onChange} placeholder="Buscar" />
     </div>
   );
 }

@@ -1,17 +1,51 @@
 import BankCard from "@/components/BankCard/BankCard";
-import Card from "@/components/Card/Card";
+import Button from "@/components/Button/Button";
 import ProgressBar from "@/components/ProgressBar/ProgressBar";
+import {
+  StyledCardsContainer,
+  StyledCardsDetails,
+  StyledDetailsButton,
+  StyledLastPurchase,
+  StyledLimit,
+  StyledMonthlyLimit,
+  StyledSubtitle,
+} from "./styles";
 
 function Cards() {
+  const toLocaleCurrency = (value: number) => {
+    return value.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+  };
   return (
-    <Card as="section">
+    <StyledCardsContainer>
+      <StyledSubtitle>Cartões</StyledSubtitle>
       <BankCard
         cardNumber="1234123412341234"
         fullName="Daniele da silva"
         validity="12/32"
       />
-      <ProgressBar total={3000} progress={2000} $width="240px" />
-    </Card>
+      <StyledCardsDetails>
+        <span>Limite disponível</span>
+        <StyledLimit>R$ 3000,00</StyledLimit>
+        <span>Última compra</span>
+        <StyledLastPurchase>
+          <span>Bazar Mituzi</span>
+          <span>R$ 300,00</span>
+        </StyledLastPurchase>
+      </StyledCardsDetails>
+      <div>
+        <ProgressBar total={3000} progress={300} $width="240px" />
+        <StyledMonthlyLimit>
+          <span>Limite mensal: </span>
+          <span>
+            {toLocaleCurrency(300)} / {toLocaleCurrency(3000)}
+          </span>
+        </StyledMonthlyLimit>
+      </div>
+      <StyledDetailsButton text="Mais detalhes" />
+    </StyledCardsContainer>
   );
 }
 
