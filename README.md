@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# Teste de front
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Como rodar
 
-Currently, two official plugins are available:
+Adicione as suas variáveis de ambiente
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+cp .env{.example,}
+#altere como desejar
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Localmente:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+nvm use
+npm i
+npm run dev
 ```
+
+### Via Docker:
+
+```bash
+docker build -t front-test .
+docker run --mount type=bind,source="$(pwd)"/src,target=/opt/dev/src -it -p 5173:5173 front-test
+```
+
+### Backend
+
+Rode esse projeto
+https://github.com/lwauke/users-api
+
+```bash
+mkdir -p ~/dev
+cd ~/dev
+git clone git@github.com:lwauke/users-api.git
+cd users-api
+docker-compose up -d
+cd -
+```
+
+Depois disso, acesse http://localhost:5173/
+
+## Build
+
+```bash
+npm run build
+```
+
+## Funcionalidades
+
+- Login e logout
+- Lembrar dispositivo usando LocalStorage
+- Armazenamento de credenciais em SessionStorage caso `lembrar dispositivo` não for `true`
+- Testes unitários
+- Responsividade na página de login
+- Responsividade na home até tablet(faltou um menu mobile para total responsividade)
