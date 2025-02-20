@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import bgImage from "../../assets/woman-bg.jpg";
+import bgImage from "../../assets/woman-bg-min.jpg";
 import FormGroup from "@/components/FormGroup/FormGroup";
 import Button from "@/components/Button/Button";
 import WhiteLogo from "../../assets/white-logo.svg";
@@ -15,9 +15,9 @@ export const BgImage = styled.div`
   background-image: url(${bgImage});
   background-size: cover;
   background-position: top;
-  width: 40%;
+  width: 50%;
   @media (min-width: 1400px) {
-    width: 55%;
+    width: 70%;
   }
   @media (max-width: 992px) {
     display: none;

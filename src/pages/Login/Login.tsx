@@ -67,11 +67,13 @@ function Login() {
           </SubTitle>
           <Paragraph>Entre na sua conta</Paragraph>
           <FormGroup
+            className="align-start"
             label="Usuário"
             type="text"
             onChange={handleUsernameChange}
           />
           <StyledPasswordFormGroup
+            className="align-start"
             label="Senha"
             type="password"
             onChange={handlePasswordChange}

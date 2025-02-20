@@ -18,6 +18,6 @@ export const Flexbox = styled.div<FlexboxProps>`
   flex-direction: ${({ direction }) => direction || "row"};
   justify-content: ${({ justify }) => justify || "flex-start"};
   align-items: ${({ align }) => align || "stretch"};
-  wrap: ${({ wrap }) => wrap || "nowrap"};
-  grow: ${({ grow }) => grow || 0};
+  flex-wrap: ${({ wrap }) => wrap || "nowrap"};
+  flex-grow: ${({ grow }) => grow || 0};
 `;
