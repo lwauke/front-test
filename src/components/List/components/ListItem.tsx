@@ -1,3 +1,4 @@
+import { format } from "@/helpers/currency";
 import { PaymentMethods } from "@/constants/PaymentMethods.enum";
 import { StyledDescription, StyledHeader, StyledListItem } from "./styles";
 
@@ -5,7 +6,7 @@ export interface ListItemProps {
   id: number;
   paymentMethod: PaymentMethods;
   store: string;
-  amount: string;
+  amount: number;
 }
 
 function ListItem({ id, paymentMethod, store, amount }: ListItemProps) {
@@ -17,7 +18,7 @@ function ListItem({ id, paymentMethod, store, amount }: ListItemProps) {
         <StyledHeader>{store}</StyledHeader>
         <StyledDescription>Compra no {paymentMethodLabel}</StyledDescription>
       </div>
-      <span className="green">{amount}</span>
+      <span className="green">{format(amount)}</span>
     </StyledListItem>
   );
 }

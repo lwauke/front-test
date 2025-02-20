@@ -6,7 +6,7 @@ describe("ProgressBar", () => {
     const progress = 50;
     const total = 100;
     const width = "200px";
-    render(<ProgressBar progress={progress} total={total} $width={width} />);
+    render(<ProgressBar progress={progress} total={total} width={width} />);
 
     const progressBarContainer = screen.getByTestId("progress-bar-container");
     const progressBar = screen.getByTestId("progress-bar");

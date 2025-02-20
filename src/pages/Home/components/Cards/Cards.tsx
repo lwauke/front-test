@@ -9,14 +9,11 @@ import {
   StyledSubtitle,
 } from "./styles";
 import { Flexbox } from "@/styles/helpers/Flexbox";
+import { format } from "@/helpers/currency";
 
 function Cards() {
-  const toLocaleCurrency = (value: number) => {
-    return value.toLocaleString("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    });
-  };
+  const limit = 3000;
+  const bill = 300;
   return (
     <StyledCardsContainer>
       <StyledSubtitle>Cartões</StyledSubtitle>
@@ -27,7 +24,7 @@ function Cards() {
       />
       <StyledCardsDetails>
         <span>Limite disponível</span>
-        <StyledLimit>R$ 3000,00</StyledLimit>
+        <StyledLimit>{format(limit)}</StyledLimit>
         <span>Última compra</span>
         <Flexbox justify="space-between" wrap="wrap">
           <span className="w-600">Bazar Mituzi</span>
@@ -35,11 +32,11 @@ function Cards() {
         </Flexbox>
       </StyledCardsDetails>
       <div>
-        <ProgressBar total={3000} progress={300} $width="240px" />
+        <ProgressBar progress={bill} total={limit} width="240px" />
         <StyledMonthlyLimit>
           <span>Limite mensal: </span>
           <span>
-            {toLocaleCurrency(300)} / {toLocaleCurrency(3000)}
+            {format(bill)} / {format(limit)}
           </span>
         </StyledMonthlyLimit>
       </div>

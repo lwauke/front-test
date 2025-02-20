@@ -8,20 +8,20 @@ function Purchases() {
     {
       id: 1,
       paymentMethod: PaymentMethods.CREDIT_CARD,
-      store: "Store A",
-      amount: "R$ 100,00",
+      store: "Bazar Mituzu",
+      amount: 300,
     },
     {
       id: 2,
       paymentMethod: PaymentMethods.DEBIT_CARD,
-      store: "Store B",
-      amount: "R$ 100,00",
+      store: "Lanchonete Dez",
+      amount: 100,
     },
     {
       id: 3,
       paymentMethod: PaymentMethods.CREDIT_CARD,
-      store: "Store C",
-      amount: "R$ 100,00",
+      store: "Loja Tatame Velho",
+      amount: 700,
     },
   ];
   return (

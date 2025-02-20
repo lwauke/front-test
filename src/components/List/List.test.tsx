@@ -8,13 +8,13 @@ describe("List", () => {
       id: 1,
       paymentMethod: PaymentMethods.CREDIT_CARD,
       store: "Test Store",
-      amount: "$10.00",
+      amount: 10.0,
     },
     {
       id: 2,
       paymentMethod: PaymentMethods.DEBIT_CARD,
       store: "Grocery store",
-      amount: "$105.00",
+      amount: 105.0,
     },
   ];
   const title = "Test List";
@@ -28,7 +28,7 @@ describe("List", () => {
     const listItemText = screen.getByText("Grocery store");
     expect(listItemText).toBeInTheDocument();
 
-    const listItemPrice = screen.getByText("$105.00");
+    const listItemPrice = screen.getByText("R$ 105,00");
     expect(listItemPrice).toBeInTheDocument();
   });
 });

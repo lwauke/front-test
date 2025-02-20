@@ -7,13 +7,13 @@ describe("ListItem", () => {
     id: 1,
     paymentMethod: PaymentMethods.CREDIT_CARD,
     store: "Test Store",
-    amount: "$10.00",
+    amount: 13.73,
   };
 
   it("renders the store name and payment method correctly", () => {
     render(<ListItem {...listItemProps} />);
 
-    const storeElement = screen.getByText(listItemProps.store);
+    const storeElement = screen.getByText("Test Store");
     const paymentMethodElement = screen.getByText("Compra no crédito");
 
     expect(storeElement).toBeInTheDocument();
