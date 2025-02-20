@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { CardContainer } from "@/components/Card/styles";
+import { StyledCard } from "@/components/Card/styles";
 import Button from "@/components/Button/Button";
 import { theme } from "@/styles/theme";
 import { Flexbox } from "@/styles/helpers/Flexbox";
 
-export const StyledCardsContainer = styled(CardContainer).attrs({
+export const StyledCardsContainer = styled(StyledCard).attrs({
   as: "section",
 })`
   display: grid;

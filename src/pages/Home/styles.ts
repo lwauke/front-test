@@ -1,8 +1,7 @@
 import styled from "styled-components";
+import { TABLET_BREAKPOINT } from "@/constants/breakpoints";
 
-export const TABLET_BREAKPOINT = "1290px";
-
-export const HomeContainer = styled.div`
+export const StyledHome = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 1fr;

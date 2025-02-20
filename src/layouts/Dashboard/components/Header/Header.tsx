@@ -4,7 +4,7 @@ import React from "react";
 import SearchInput from "@/components/SearchInput/SearchInput";
 import { StyledHeader, StyledNotificationContainer } from "./styles";
 import UserProfile from "./components/UserProfile/UserProfile";
-import NotificationIcon from "@/assets/notification-icon.svg";
+import NotificationIcon from "@/assets/icons/notification-icon.svg";
 import { logout } from "@/redux/authSlice";
 
 function Header() {

@@ -2,16 +2,16 @@ import { styled } from "styled-components";
 import bgImage from "../../assets/woman-bg-min.jpg";
 import FormGroup from "@/components/FormGroup/FormGroup";
 import Button from "@/components/Button/Button";
-import WhiteLogo from "../../assets/white-logo.svg";
-import GreenLogo from "../../assets/green-logo.svg";
+import WhiteLogo from "@/assets/logos/white-logo.svg";
+import GreenLogo from "@/assets/logos/green-logo.svg";
 import { theme } from "@/styles/theme";
 
-export const Container = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
   min-height: 100vh;
 `;
 
-export const BgImage = styled.div`
+export const StyledBgImage = styled.div`
   background-image: url(${bgImage});
   background-size: cover;
   background-position: top;
@@ -51,19 +51,19 @@ export const StyledGreenLogo = styled.img.attrs({
   }
 `;
 
-export const SubTitle = styled.h3`
+export const StyledSubTitle = styled.h3`
   margin: 0;
   font-size: 48px;
 `;
 
-export const Paragraph = styled.p`
+export const StyledParagraph = styled.p`
   margin: 0 0 48px;
   font-size: 1em;
   font-weight: ${theme.typography.fontWeight.light};
   color: ${theme.colors.darkGray};
 `;
 
-export const Form = styled.form`
+export const StyledForm = styled.form`
   max-width: 360px;
   width: 80%;
 `;

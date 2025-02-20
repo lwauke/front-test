@@ -1,17 +1,17 @@
-import { Nav, StyledSidebar, StyledGreenLogo } from "./styles";
+import { StyledSidebar, StyledGreenLogo, StyledNav } from "./styles";
 import NavItem from "./components/NavItem/NavItem";
-import HomeIcon from "../../../../assets/home-icon.svg";
-import WalletIcon from "../../../../assets/wallet-icon.svg";
-import ArrowIcon from "../../../../assets/arrow-icon.svg";
-import ServicesIcon from "../../../../assets/services-icon.svg";
-import ConfigIcon from "../../../../assets/config-icon.svg";
+import HomeIcon from "@/assets/icons/home-icon.svg";
+import WalletIcon from "@/assets/icons/wallet-icon.svg";
+import ArrowIcon from "@/assets/icons/arrow-icon.svg";
+import ServicesIcon from "@/assets/icons/services-icon.svg";
+import ConfigIcon from "@/assets/icons/config-icon.svg";
 import Help from "./components/Help/Help";
 
 function Sidebar() {
   return (
     <StyledSidebar>
       <StyledGreenLogo />
-      <Nav>
+      <StyledNav>
         <NavItem
           text="Painel"
           path="/"
@@ -42,7 +42,7 @@ function Sidebar() {
           iconPath={ConfigIcon}
           iconAlt="Ícone de Configurações"
         />
-      </Nav>
+      </StyledNav>
       <Help />
     </StyledSidebar>
   );

@@ -8,9 +8,9 @@ import {
   StyledValidity,
   StyledValidityContainer,
 } from "./styles";
-import ChipIcon from "@/assets/chip-icon.svg";
-import ContactlessIcon from "@/assets/contactless-icon.svg";
-import WhiteLogo from "@/assets/white-logo.svg";
+import ChipIcon from "@/assets/icons/chip-icon.svg";
+import ContactlessIcon from "@/assets/icons/contactless-icon.svg";
+import WhiteLogo from "@/assets/logos/white-logo.svg";
 import { StyledMastercard } from "../Mastercard/styles";
 import { Flexbox } from "@/styles/helpers/Flexbox";
 

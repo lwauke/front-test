@@ -1,5 +1,5 @@
 import { HTMLInputTypeAttribute, ChangeEvent } from "react";
-import { Input, Label } from "./styles";
+import { StyledInput, StyledLabel } from "./styles";
 
 interface FormGroupProps {
   label: string;
@@ -11,8 +11,8 @@ interface FormGroupProps {
 function FormGroup({ label, type, className, onChange }: FormGroupProps) {
   return (
     <div className={className}>
-      <Label id={label}>{label}</Label>
-      <Input type={type} onChange={onChange} aria-labelledby={label} />
+      <StyledLabel id={label}>{label}</StyledLabel>
+      <StyledInput type={type} onChange={onChange} aria-labelledby={label} />
     </div>
   );
 }

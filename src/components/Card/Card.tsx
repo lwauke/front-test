@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { CardContainer } from "./styles";
+import { StyledCard } from "./styles";
 
 interface CardProps {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 function Card({ children, as }: CardProps) {
-  return <CardContainer as={as}>{children}</CardContainer>;
+  return <StyledCard as={as}>{children}</StyledCard>;
 }
 
 export default Card;

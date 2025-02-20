@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { TABLET_BREAKPOINT } from "../../styles";
-import { CardContainer } from "@/components/Card/styles";
 import { Flexbox } from "@/styles/helpers/Flexbox";
 import { theme } from "@/styles/theme";
+import { TABLET_BREAKPOINT } from "@/constants/breakpoints";
+import { StyledCard } from "@/components/Card/styles";
 
-export const SummaryContainer = styled.div`
+export const StyledSummary = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
@@ -26,7 +26,7 @@ export const SummaryContainer = styled.div`
   }
 `;
 
-export const StyledSummaryCard = styled(CardContainer)`
+export const StyledSummaryCard = styled(StyledCard)`
   text-align: center;
   padding: 16px;
   display: flex;

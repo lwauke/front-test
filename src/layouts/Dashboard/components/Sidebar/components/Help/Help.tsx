@@ -1,13 +1,19 @@
 import Button from "@/components/Button/Button";
-import { HelpContainer, HelpTitle, HelpParagraph } from "./styles";
+import {
+  StyledHelpContainer,
+  StyledHelpTitle,
+  StyledHelpParagraph,
+} from "./styles";
 
 function Help() {
   return (
-    <HelpContainer>
-      <HelpTitle>Precisa de ajuda?</HelpTitle>
-      <HelpParagraph>Fale com um dos nossos especialistas</HelpParagraph>
+    <StyledHelpContainer>
+      <StyledHelpTitle>Precisa de ajuda?</StyledHelpTitle>
+      <StyledHelpParagraph>
+        Fale com um dos nossos especialistas
+      </StyledHelpParagraph>
       <Button text="CONTATAR" $ghost />
-    </HelpContainer>
+    </StyledHelpContainer>
   );
 }
 

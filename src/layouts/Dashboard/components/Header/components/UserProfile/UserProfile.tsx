@@ -1,5 +1,5 @@
 import { Flexbox } from "@/styles/helpers/Flexbox";
-import AvatarIcon from "../../../../../../assets/avatar-icon.svg";
+import AvatarIcon from "@/assets/icons/avatar-icon.svg";
 import { StyledUserName } from "./styles";
 
 function UserProfile() {

@@ -1,5 +1,5 @@
 import ListItem, { ListItemProps } from "./components/ListItem";
-import { ListContainer, StyledHeader } from "./styles";
+import { StyledHeader, StyledList } from "./styles";
 
 interface ListProps {
   items: ListItemProps[];
@@ -8,14 +8,14 @@ interface ListProps {
 
 function List({ items, title }: ListProps) {
   return (
-    <ListContainer>
+    <StyledList>
       <StyledHeader>{title}</StyledHeader>
       <ul>
         {items.map((item) => (
           <ListItem {...item} key={item.id} />
         ))}
       </ul>
-    </ListContainer>
+    </StyledList>
   );
 }
 

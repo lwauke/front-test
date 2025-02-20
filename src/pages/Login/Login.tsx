@@ -3,15 +3,15 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import FormGroup from "@/components/FormGroup/FormGroup";
 import {
-  BgImage,
-  Form,
-  Paragraph,
-  Container,
+  StyledBgImage,
+  StyledForm,
+  StyledParagraph,
+  StyledContainer,
   StyledButton,
   StyledGreenLogo,
   StyledPasswordFormGroup,
   StyledWhiteLogo,
-  SubTitle,
+  StyledSubTitle,
 } from "./styles";
 import { useLoginMutation } from "@/redux/api";
 import { setCredentials } from "@/redux/authSlice";
@@ -56,16 +56,16 @@ function Login() {
   };
 
   return (
-    <Container>
+    <StyledContainer>
       <StyledWhiteLogo />
-      <BgImage />
+      <StyledBgImage />
       <Flexbox grow={1} justify="center" align="center">
-        <Form onSubmit={handleLogin}>
+        <StyledForm onSubmit={handleLogin}>
           <StyledGreenLogo />
-          <SubTitle>
+          <StyledSubTitle>
             Bem vindo <span className="green">:)</span>
-          </SubTitle>
-          <Paragraph>Entre na sua conta</Paragraph>
+          </StyledSubTitle>
+          <StyledParagraph>Entre na sua conta</StyledParagraph>
           <FormGroup
             className="align-start"
             label="Usuário"
@@ -100,9 +100,9 @@ function Login() {
               Faça uma agora
             </a>
           </p>
-        </Form>
+        </StyledForm>
       </Flexbox>
-    </Container>
+    </StyledContainer>
   );
 }
 

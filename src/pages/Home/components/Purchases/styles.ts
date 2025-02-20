@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import Button from "@/components/Button/Button";
-import { CardContainer } from "@/components/Card/styles";
-import { ListContainer } from "@/components/List/styles";
+import { StyledList } from "@/components/List/styles";
 import { theme } from "@/styles/theme";
+import { StyledCard } from "@/components/Card/styles";
 
-export const PurchasesContainer = styled(CardContainer).attrs({
+export const StyledPurchases = styled(StyledCard).attrs({
   as: "section",
 })`
   padding: 24px;
-  ${ListContainer} {
+  ${StyledList} {
     margin-bottom: 12px;
   }
 `;

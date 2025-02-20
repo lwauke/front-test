@@ -1,17 +1,17 @@
 import { Outlet } from "react-router";
-import { Container, StyledMain } from "./styles";
+import { StyledDashboard, StyledMain } from "./styles";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
 
 function DashboardLayout() {
   return (
-    <Container>
+    <StyledDashboard>
       <Sidebar />
       <Header />
       <StyledMain>
         <Outlet />
       </StyledMain>
-    </Container>
+    </StyledDashboard>
   );
 }
 

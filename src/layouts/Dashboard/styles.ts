@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "@/styles/theme";
 
-export const Container = styled.div`
+export const StyledDashboard = styled.div`
   background: ${theme.colors.primary};
   min-height: 100vh;
   display: grid;

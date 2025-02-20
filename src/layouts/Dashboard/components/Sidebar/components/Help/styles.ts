@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "@/styles/theme";
 
-export const HelpContainer = styled.div`
+export const StyledHelpContainer = styled.div`
   position: absolute;
   bottom: 32px;
   right: 30px;
@@ -13,13 +13,13 @@ export const HelpContainer = styled.div`
   box-sizing: border-box;
 `;
 
-export const HelpTitle = styled.h4`
+export const StyledHelpTitle = styled.h4`
   font-size: 1.5em;
   font-weight: ${theme.typography.fontWeight.bold};
   margin: 0;
 `;
 
-export const HelpParagraph = styled.p`
+export const StyledHelpParagraph = styled.p`
   margin: 10px 0;
   font-size: 1em;
 `;

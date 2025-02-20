@@ -1,15 +1,15 @@
-import { HomeContainer } from "./styles";
+import { StyledHome } from "./styles";
 import Summary from "./components/Summary/Summary";
 import Purchases from "./components/Purchases/Purchases";
 import Cards from "./components/Cards/Cards";
 
 function Home() {
   return (
-    <HomeContainer>
+    <StyledHome>
       <Summary />
       <Cards />
       <Purchases />
-    </HomeContainer>
+    </StyledHome>
   );
 }
 

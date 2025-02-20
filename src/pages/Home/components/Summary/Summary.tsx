@@ -1,12 +1,12 @@
 import Card from "@/components/Card/Card";
 import CardFooter from "@/components/Card/components/CardFooter/CardFooter";
 import CardHeader from "@/components/Card/components/CardHeader/CardHeader";
-import { SummaryContainer, StyledSummaryCard, StyledPlusIcon } from "./styles";
+import { StyledSummaryCard, StyledPlusIcon, StyledSummary } from "./styles";
 import { Flexbox } from "@/styles/helpers/Flexbox";
 
 function Summaryy() {
   return (
-    <SummaryContainer as="section">
+    <StyledSummary as="section">
       <Card>
         <Flexbox direction="column">
           <CardHeader text="+6%" variant="ghost" />
@@ -34,7 +34,7 @@ function Summaryy() {
         <StyledPlusIcon />
         <span>Configurar atalhos</span>
       </StyledSummaryCard>
-    </SummaryContainer>
+    </StyledSummary>
   );
 }
 

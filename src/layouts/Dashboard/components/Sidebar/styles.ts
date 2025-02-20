@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import GreenLogo from "../../../../assets/green-logo.svg";
+import GreenLogo from "@/assets/logos/green-logo.svg";
 import { theme } from "@/styles/theme";
 
 export const StyledGreenLogo = styled.img.attrs({
@@ -16,7 +16,7 @@ export const StyledSidebar = styled.aside`
   grid-row: 1 / 3;
 `;
 
-export const Nav = styled.nav`
+export const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   width: 240px;

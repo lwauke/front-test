@@ -8,4 +8,4 @@ export const StyledHeader = styled.h4`
   font-size: 0.875em;
 `;
 
-export const ListContainer = styled.div``;
+export const StyledList = styled.div``;
