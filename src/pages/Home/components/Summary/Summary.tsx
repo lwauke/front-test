@@ -2,9 +2,9 @@ import Card from "@/components/Card/Card";
 import CardContent from "@/components/Card/components/CardContent/CardContent";
 import CardFooter from "@/components/Card/components/CardFooter/CardFooter";
 import CardHeader from "@/components/Card/components/CardHeader/CardHeader";
-import { SummaryContainer } from "./styles";
+import { SummaryContainer, StyledSummaryCard, StyledPlusIcon } from "./styles";
 
-function Summary() {
+function Summaryy() {
   return (
     <SummaryContainer as="section">
       <Card>
@@ -30,11 +30,12 @@ function Summary() {
           <CardFooter mainText="R$ 9.000,00" description="Cartões" />
         </CardContent>
       </Card>
-      <Card>
-        <CardContent>icone</CardContent>
-      </Card>
+      <StyledSummaryCard>
+        <StyledPlusIcon />
+        <span>Configurar atalhos</span>
+      </StyledSummaryCard>
     </SummaryContainer>
   );
 }
 
-export default Summary;
+export default Summaryy;
