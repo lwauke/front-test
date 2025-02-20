@@ -39,6 +39,7 @@ export const StyledCardsDetails = styled(Flexbox).attrs({
 `;
 
 export const StyledLimit = styled.span`
+  font-weight: ${theme.typography.fontWeight.bolder};
   font-size: 1.5em;
   margin-bottom: auto;
 `;

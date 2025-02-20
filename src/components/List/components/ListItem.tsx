@@ -13,7 +13,7 @@ function ListItem({ id, paymentMethod, store, amount }: ListItemProps) {
     paymentMethod === PaymentMethods.CREDIT_CARD ? "crédito" : "débito";
   return (
     <StyledListItem key={id}>
-      <div>
+      <div className="align-start">
         <StyledHeader>{store}</StyledHeader>
         <StyledDescription>Compra no {paymentMethodLabel}</StyledDescription>
       </div>

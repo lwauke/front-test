@@ -41,6 +41,9 @@ const GlobalStyle = createGlobalStyle`
   .relative {
     position: relative;
   }
+  .align-start {
+    text-align: start;
+  }
 `;
 
 export default GlobalStyle;

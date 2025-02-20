@@ -31,8 +31,8 @@ function Cards() {
         <StyledLimit>R$ 3000,00</StyledLimit>
         <span>Última compra</span>
         <Flexbox justify="space-between" wrap="wrap">
-          <span>Bazar Mituzi</span>
-          <span>R$ 300,00</span>
+          <span className="w-600">Bazar Mituzi</span>
+          <span className="w-600">R$ 300,00</span>
         </Flexbox>
       </StyledCardsDetails>
       <div>
