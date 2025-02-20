@@ -8,7 +8,6 @@ import ConfigIcon from "@/assets/icons/config-icon.svg";
 import Help from "./components/Help/Help";
 
 function Sidebar() {
-  console.log(HomeIcon);
   return (
     <StyledSidebar>
       <StyledGreenLogo />
