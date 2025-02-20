@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import { store } from "./redux/store";
+import Card from "./components/Card/Card";
 
 function App() {
   return (
@@ -19,6 +20,38 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/wallet"
+              element={
+                <ProtectedRoute>
+                  <Card>carteira</Card>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/transactions"
+              element={
+                <ProtectedRoute>
+                  <Card>transferências</Card>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/services"
+              element={
+                <ProtectedRoute>
+                  <Card>serviços</Card>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/config"
+              element={
+                <ProtectedRoute>
+                  <Card>configurações</Card>
                 </ProtectedRoute>
               }
             />
