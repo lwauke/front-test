@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { TABLET_BREAKPOINT } from "../../styles";
 import { CardContainer } from "@/components/Card/styles";
+import { Flexbox } from "@/styles/helpers/Flexbox";
+import { theme } from "@/styles/theme";
 
 export const SummaryContainer = styled.div`
   display: grid;
@@ -19,9 +21,13 @@ export const SummaryContainer = styled.div`
   @media (min-width: ${TABLET_BREAKPOINT}) {
     grid-column: 1 / 3;
   }
+  ${Flexbox} {
+    height: 100%;
+  }
 `;
 
 export const StyledSummaryCard = styled(CardContainer)`
+  text-align: center;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -43,9 +49,9 @@ export const StyledPlusIcon = styled.span.attrs({
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #484848;
-  font-size: 24px;
-  color: #fff;
+  background-color: ${theme.colors.darkGray};
+  font-size: 1.5em;
+  color: ${theme.colors.white};
   &::after {
     content: "+";
     transform: translate(0px, -1px);

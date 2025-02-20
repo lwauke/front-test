@@ -1,16 +1,16 @@
 import styled from "styled-components";
+import { theme } from "@/styles/theme";
 
 export const StyledDefaultHeader = styled.span`
-  font-size: 12px;
-  color: #1bc681;
-  background-color: #1bc681;
-  color: #fff;
+  font-size: 0.75em;
+  background-color: ${theme.colors.primary};
+  color: ${theme.colors.white};
   padding: 4px 8px;
   border-radius: 6px;
 `;
 
 export const StyledGhostHeader = styled.span`
-  font-size: 24px;
-  font-weight: 300;
-  color: #1bc681;
+  font-size: 1.5em;
+  font-weight: ${theme.typography.fontWeight.light};
+  color: ${theme.colors.primary};
 `;

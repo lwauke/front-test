@@ -7,11 +7,24 @@ interface ButtonProps {
     event: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLButtonElement>,
   ) => void;
   className?: string;
+  $primary?: boolean;
+  $ghost?: boolean;
 }
 
-function Button({ text, onClick = () => {}, className = "" }: ButtonProps) {
+function Button({
+  text,
+  onClick = () => {},
+  className = "",
+  $primary = true,
+  $ghost = false,
+}: ButtonProps) {
   return (
-    <StyledButton onClick={onClick} className={className}>
+    <StyledButton
+      onClick={onClick}
+      className={className}
+      $primary={$primary}
+      $ghost={$ghost}
+    >
       {text}
     </StyledButton>
   );

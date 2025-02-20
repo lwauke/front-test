@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { theme } from "@/styles/theme";
 
 export const Container = styled.div`
-  background: #1bc681;
+  background: ${theme.colors.primary};
   min-height: 100vh;
   display: grid;
   grid-template-columns: 280px auto;

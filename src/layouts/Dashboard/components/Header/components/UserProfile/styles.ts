@@ -1,16 +1,14 @@
 import styled from "styled-components";
+import { Flexbox } from "@/styles/helpers/Flexbox";
+import { theme } from "@/styles/theme";
 
-export const UserProfileContainer = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const StyledUserName = styled.span`
-  display: flex;
-  align-items: center;
+export const StyledUserName = styled(Flexbox).attrs({
+  align: "center",
+  as: "span",
+})`
   padding-bottom: 3px;
   margin-left: 10px;
   .user {
-    font-weight: 700;
+    font-weight: ${theme.typography.fontWeight.bold};
   }
 `;

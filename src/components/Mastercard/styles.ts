@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// it was not possible to export this as svg, so I decided to develop it
 export const StyledMastercard = styled.div`
   position: relative;
   width: 30px;
@@ -15,7 +16,7 @@ export const StyledMastercard = styled.div`
     position: absolute;
   }
   &::before {
-    background: #e5031b;
+    background: #e5031b; // not a color from theme, definitly
     z-index: 1;
     mix-blend-mode: hard-light;
   }

@@ -1,14 +1,15 @@
+import { Flexbox } from "@/styles/helpers/Flexbox";
 import AvatarIcon from "../../../../../../assets/avatar-icon.svg";
-import { StyledUserName, UserProfileContainer } from "./styles";
+import { StyledUserName } from "./styles";
 
 function UserProfile() {
   return (
-    <UserProfileContainer>
+    <Flexbox align="center">
       <img src={AvatarIcon} alt="Ícone de avatar" />
       <StyledUserName>
         Bem vindo,&nbsp;<span className="user">user name</span>
       </StyledUserName>
-    </UserProfileContainer>
+    </Flexbox>
   );
 }
 

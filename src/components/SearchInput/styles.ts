@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { theme } from "@/styles/theme";
 
 export const StyledSearchInput = styled.input`
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid ${theme.colors.white};
   height: 36px;
   border-radius: 6px;
   width: 240px;

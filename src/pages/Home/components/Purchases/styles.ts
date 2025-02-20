@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Button from "@/components/Button/Button";
 import { CardContainer } from "@/components/Card/styles";
 import { ListContainer } from "@/components/List/styles";
+import { theme } from "@/styles/theme";
 
 export const PurchasesContainer = styled(CardContainer).attrs({
   as: "section",
@@ -13,8 +14,8 @@ export const PurchasesContainer = styled(CardContainer).attrs({
 `;
 
 export const StyledHeader = styled.h3`
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: ${theme.typography.fontWeight.bolder};
+  font-size: 1.125em;
   margin-bottom: 16px;
 `;
 

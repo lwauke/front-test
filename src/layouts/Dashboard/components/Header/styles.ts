@@ -1,20 +1,23 @@
 import styled from "styled-components";
+import { theme } from "@/styles/theme";
+import { Flexbox } from "@/styles/helpers/Flexbox";
 
-export const StyledHeader = styled.header`
+export const StyledHeader = styled(Flexbox).attrs({
+  as: "header",
+  align: "center",
+})`
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  color: #fff;
+  color: ${theme.colors.white};
 `;
 
-export const StyledNotificationContainer = styled.div`
+export const StyledNotificationContainer = styled(Flexbox).attrs({
+  justify: "flex-end",
+  align: "center",
+})`
   flex-grow: 1;
   text-align: right;
   margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   .logout {
     margin-right: 8px;
     padding-bottom: 3px;

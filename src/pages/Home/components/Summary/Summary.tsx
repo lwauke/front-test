@@ -3,32 +3,33 @@ import CardContent from "@/components/Card/components/CardContent/CardContent";
 import CardFooter from "@/components/Card/components/CardFooter/CardFooter";
 import CardHeader from "@/components/Card/components/CardHeader/CardHeader";
 import { SummaryContainer, StyledSummaryCard, StyledPlusIcon } from "./styles";
+import { Flexbox } from "@/styles/helpers/Flexbox";
 
 function Summaryy() {
   return (
     <SummaryContainer as="section">
       <Card>
-        <CardContent>
+        <Flexbox direction="column">
           <CardHeader text="+6%" variant="ghost" />
           <CardFooter mainText="R$ 3.000,00" description="Gasto desse mês" />
-        </CardContent>
+        </Flexbox>
       </Card>
       <Card>
-        <CardContent>
+        <Flexbox direction="column">
           <CardHeader text="+23%" variant="ghost" />
           <CardFooter mainText="R$ 3.000,00" description="Recebido desse mês" />
-        </CardContent>
+        </Flexbox>
       </Card>
       <Card>
-        <CardContent>
+        <Flexbox direction="column">
           <CardHeader text="+R$ 242,13 (+2.54%)" />
           <CardFooter mainText="R$ 9.000,00" description="Investimentos" />
-        </CardContent>
+        </Flexbox>
       </Card>
       <Card>
-        <CardContent>
+        <Flexbox direction="column">
           <CardFooter mainText="R$ 9.000,00" description="Cartões" />
-        </CardContent>
+        </Flexbox>
       </Card>
       <StyledSummaryCard>
         <StyledPlusIcon />

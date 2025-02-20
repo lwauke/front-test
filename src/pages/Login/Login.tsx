@@ -4,11 +4,9 @@ import { useNavigate } from "react-router";
 import FormGroup from "@/components/FormGroup/FormGroup";
 import {
   BgImage,
-  Container,
   Form,
-  FormContainer,
-  FormOptions,
   Paragraph,
+  Container,
   StyledButton,
   StyledGreenLogo,
   StyledPasswordFormGroup,
@@ -17,6 +15,7 @@ import {
 } from "./styles";
 import { useLoginMutation } from "@/redux/api";
 import { setCredentials } from "@/redux/authSlice";
+import { Flexbox } from "@/styles/helpers/Flexbox";
 
 function Login() {
   const dispatch = useDispatch();
@@ -60,7 +59,7 @@ function Login() {
     <Container>
       <StyledWhiteLogo />
       <BgImage />
-      <FormContainer>
+      <Flexbox grow={1} justify="center" align="center">
         <Form onSubmit={handleLogin}>
           <StyledGreenLogo />
           <SubTitle>
@@ -77,7 +76,7 @@ function Login() {
             type="password"
             onChange={handlePasswordChange}
           />
-          <FormOptions>
+          <Flexbox justify="space-between">
             <span className="w-600">
               <input
                 type="checkbox"
@@ -90,7 +89,7 @@ function Login() {
             <a href="/" className="blue">
               Esqueceu a senha?
             </a>
-          </FormOptions>
+          </Flexbox>
           <StyledButton text={isLoading ? "Carregando" : "Entrar"} />
           {showError && <p className="red">erro ao logar usuário</p>}
           <p>
@@ -100,7 +99,7 @@ function Login() {
             </a>
           </p>
         </Form>
-      </FormContainer>
+      </Flexbox>
     </Container>
   );
 }

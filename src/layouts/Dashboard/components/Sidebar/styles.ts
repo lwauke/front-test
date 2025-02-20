@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import GreenLogo from "../../../../assets/green-logo.svg";
+import { theme } from "@/styles/theme";
 
 export const StyledGreenLogo = styled.img.attrs({
   src: GreenLogo,
@@ -10,7 +11,7 @@ export const StyledGreenLogo = styled.img.attrs({
 `;
 
 export const StyledSidebar = styled.aside`
-  background: #fff;
+  background: ${theme.colors.white};
   position: relative;
   grid-row: 1 / 3;
 `;

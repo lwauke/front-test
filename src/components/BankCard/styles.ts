@@ -1,14 +1,20 @@
 import styled from "styled-components";
+import { theme } from "@/styles/theme";
+import { Flexbox } from "@/styles/helpers/Flexbox";
 
 export const StyledBankCard = styled.div`
   width: 240px;
   min-height: 140px;
   font-family: "JetBrains Mono";
-  background: linear-gradient(248.54deg, #1bc681 1.38%, #0d603f 89.61%);
+  background: linear-gradient(
+    248.54deg,
+    ${theme.colors.primary} 1.38%,
+    ${theme.colors.forestGreen} 89.61%
+  );
   box-sizing: border-box;
   border-radius: 8px;
   padding: 10px 16px;
-  color: #fff;
+  color: ${theme.colors.white};
 `;
 
 export const StyledLogoIcon = styled.img`
@@ -34,19 +40,13 @@ export const StyledCardNumber = styled.p`
   }
 `;
 
-export const StyledFooter = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const StyledFullName = styled.span`
   font-size: 12px;
 `;
 
-export const StyledValidityContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+export const StyledValidityContainer = styled(Flexbox).attrs({
+  direction: "column",
+})`
   font-size: 6px;
 `;
 

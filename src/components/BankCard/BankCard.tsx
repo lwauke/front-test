@@ -3,7 +3,6 @@ import {
   StyledCardNumber,
   StyledChipIcon,
   StyledContactlessIcon,
-  StyledFooter,
   StyledFullName,
   StyledLogoIcon,
   StyledValidity,
@@ -13,6 +12,7 @@ import ChipIcon from "@/assets/chip-icon.svg";
 import ContactlessIcon from "@/assets/contactless-icon.svg";
 import WhiteLogo from "@/assets/white-logo.svg";
 import { StyledMastercard } from "../Mastercard/styles";
+import { Flexbox } from "@/styles/helpers/Flexbox";
 
 interface BankCardProps {
   cardNumber: string;
@@ -31,14 +31,14 @@ function BankCard({ cardNumber, fullName, validity }: BankCardProps) {
           <span key={part}>{part}</span>
         ))}
       </StyledCardNumber>
-      <StyledFooter>
+      <Flexbox justify="space-between" align="center">
         <StyledFullName>{fullName}</StyledFullName>
         <StyledValidityContainer>
           <span>Validade</span>
           <StyledValidity>{validity}</StyledValidity>
         </StyledValidityContainer>
         <StyledMastercard />
-      </StyledFooter>
+      </Flexbox>
     </StyledBankCard>
   );
 }

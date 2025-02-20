@@ -4,6 +4,7 @@ import FormGroup from "@/components/FormGroup/FormGroup";
 import Button from "@/components/Button/Button";
 import WhiteLogo from "../../assets/white-logo.svg";
 import GreenLogo from "../../assets/green-logo.svg";
+import { theme } from "@/styles/theme";
 
 export const Container = styled.div`
   display: flex;
@@ -57,26 +58,14 @@ export const SubTitle = styled.h3`
 
 export const Paragraph = styled.p`
   margin: 0 0 48px;
-  font-size: 24px;
-  font-weight: 300;
-  color: #484848;
-`;
-
-export const FormContainer = styled.div`
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 1em;
+  font-weight: ${theme.typography.fontWeight.light};
+  color: ${theme.colors.darkGray};
 `;
 
 export const Form = styled.form`
   max-width: 360px;
   width: 80%;
-`;
-
-export const FormOptions = styled.div`
-  display: flex;
-  justify-content: space-between;
 `;
 
 export const StyledPasswordFormGroup = styled(FormGroup)`

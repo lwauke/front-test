@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { CardContainer } from "@/components/Card/styles";
 import Button from "@/components/Button/Button";
+import { theme } from "@/styles/theme";
+import { Flexbox } from "@/styles/helpers/Flexbox";
 
 export const StyledCardsContainer = styled(CardContainer).attrs({
   as: "section",
@@ -11,44 +13,42 @@ export const StyledCardsContainer = styled(CardContainer).attrs({
   gap: 18px 60px;
   align-items: stretch;
   padding: 24px;
+  font-weight: ${theme.typography.fontWeight.bolder};
 `;
 
 export const StyledSubtitle = styled.h3`
-  font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125em;
   grid-column: 1 / 3;
 `;
 
-export const StyledMonthlyLimit = styled.div`
-  font-weight: 400;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
+export const StyledMonthlyLimit = styled(Flexbox).attrs({
+  justify: "space-between",
+})`
+  font-weight: ${theme.typography.fontWeight.regular};
+  font-size: 0.875em;
   margin-top: 4px;
 `;
 
-export const StyledCardsDetails = styled.div`
-  display: flex;
-  flex-direction: column;
+export const StyledCardsDetails = styled(Flexbox).attrs({
+  direction: "column",
+})`
   min-height: 120px;
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 1em;
+  font-weight: ${theme.typography.fontWeight.light};
   margin: auto 0;
 `;
 
 export const StyledLimit = styled.span`
-  font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5em;
   margin-bottom: auto;
 `;
 
 export const StyledLastPurchase = styled.div`
-  font-weight: 600;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 `;
 
-export const StyledDetailsButton = styled(Button)`
+export const StyledDetailsButton = styled(Button).attrs({ $primary: true })`
   height: auto;
 `;

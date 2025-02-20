@@ -1,5 +1,4 @@
 import BankCard from "@/components/BankCard/BankCard";
-import Button from "@/components/Button/Button";
 import ProgressBar from "@/components/ProgressBar/ProgressBar";
 import {
   StyledCardsContainer,
@@ -10,6 +9,7 @@ import {
   StyledMonthlyLimit,
   StyledSubtitle,
 } from "./styles";
+import { Flexbox } from "@/styles/helpers/Flexbox";
 
 function Cards() {
   const toLocaleCurrency = (value: number) => {
@@ -30,10 +30,10 @@ function Cards() {
         <span>Limite disponível</span>
         <StyledLimit>R$ 3000,00</StyledLimit>
         <span>Última compra</span>
-        <StyledLastPurchase>
+        <Flexbox justify="space-between" wrap="wrap">
           <span>Bazar Mituzi</span>
           <span>R$ 300,00</span>
-        </StyledLastPurchase>
+        </Flexbox>
       </StyledCardsDetails>
       <div>
         <ProgressBar total={3000} progress={300} $width="240px" />
