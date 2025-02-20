@@ -7,6 +7,7 @@ export const StyledDefaultHeader = styled.span`
   color: ${theme.colors.white};
   padding: 4px 8px;
   border-radius: 6px;
+  align-self: flex-start;
 `;
 
 export const StyledGhostHeader = styled.span`

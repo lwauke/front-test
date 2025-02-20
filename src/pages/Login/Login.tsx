@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import FormGroup from "@/components/FormGroup/FormGroup";
 import {
@@ -16,6 +16,7 @@ import {
 import { useLoginMutation } from "@/redux/api";
 import { setCredentials } from "@/redux/authSlice";
 import { Flexbox } from "@/styles/helpers/Flexbox";
+import { store } from "@/redux/store";
 
 function Login() {
   const dispatch = useDispatch();
@@ -25,6 +26,12 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rememberCredentials, setRememberCredentials] = useState(false);
+
+  const { token } = useSelector(
+    (state: ReturnType<typeof store.getState>) => state?.auth,
+  );
+
+  if (token) navigate("/");
 
   useEffect(() => {
     setShowError(!!error);
