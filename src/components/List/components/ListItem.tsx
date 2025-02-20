@@ -1,5 +1,5 @@
 import { PaymentMethods } from "@/constants/PaymentMethods.enum";
-import { StyledListItem } from "./styles";
+import { StyledDescription, StyledHeader, StyledListItem } from "./styles";
 
 export interface ListItemProps {
   id: number;
@@ -14,8 +14,8 @@ function ListItem({ id, paymentMethod, store, amount }: ListItemProps) {
   return (
     <StyledListItem key={id}>
       <div>
-        <p>{store}</p>
-        <span>Compra no {paymentMethodLabel}</span>
+        <StyledHeader>{store}</StyledHeader>
+        <StyledDescription>Compra no {paymentMethodLabel}</StyledDescription>
       </div>
       <span className="green">{amount}</span>
     </StyledListItem>

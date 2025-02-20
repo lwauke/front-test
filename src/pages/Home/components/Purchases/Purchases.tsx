@@ -1,9 +1,7 @@
-import Card from "@/components/Card/Card";
 import { ListItemProps } from "@/components/List/components/ListItem";
 import List from "@/components/List/List";
 import { PaymentMethods } from "@/constants/PaymentMethods.enum";
-import { StyledHeader } from "./styles";
-import Button from "@/components/Button/Button";
+import { PurchasesContainer, StyledButton, StyledHeader } from "./styles";
 
 function Purchases() {
   const mockItems: ListItemProps[] = [
@@ -27,12 +25,12 @@ function Purchases() {
     },
   ];
   return (
-    <Card as="section">
+    <PurchasesContainer>
       <StyledHeader>Últimas compras</StyledHeader>
       <List title="03/12" items={mockItems} />
       <List title="05/12" items={mockItems} />
-      <Button text="Extrato" />
-    </Card>
+      <StyledButton text="EXTRATO" />
+    </PurchasesContainer>
   );
 }
 
