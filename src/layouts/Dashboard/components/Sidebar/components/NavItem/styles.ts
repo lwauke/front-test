@@ -11,9 +11,13 @@ export const StyledNavItem = styled(NavLink)`
   &.active {
     background: ${theme.colors.primary};
     color: ${theme.colors.white};
+    svg {
+      fill: ${theme.colors.white};
+    }
   }
-  & img {
+  & svg {
     margin-right: 8px;
+    fill: ${theme.colors.darkGray};
   }
   &:not(.active):hover {
     background-color: #efefef;

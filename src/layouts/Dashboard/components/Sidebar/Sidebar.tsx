@@ -1,6 +1,6 @@
 import { StyledSidebar, StyledGreenLogo, StyledNav } from "./styles";
 import NavItem from "./components/NavItem/NavItem";
-import HomeIcon from "@/assets/icons/home-icon.svg";
+import HomeIcon from "../../../../assets/icons/home-icon.svg";
 import WalletIcon from "@/assets/icons/wallet-icon.svg";
 import ArrowIcon from "@/assets/icons/arrow-icon.svg";
 import ServicesIcon from "@/assets/icons/services-icon.svg";
@@ -8,6 +8,7 @@ import ConfigIcon from "@/assets/icons/config-icon.svg";
 import Help from "./components/Help/Help";
 
 function Sidebar() {
+  console.log(HomeIcon);
   return (
     <StyledSidebar>
       <StyledGreenLogo />
@@ -15,31 +16,31 @@ function Sidebar() {
         <NavItem
           text="Painel"
           path="/"
-          iconPath={HomeIcon}
+          svg={HomeIcon}
           iconAlt="Ícone da Home"
         />
         <NavItem
           text="Carteira"
           path="/wallet"
-          iconPath={WalletIcon}
+          svg={WalletIcon}
           iconAlt="Ícone da Carteira"
         />
         <NavItem
           text="Transferências"
           path="/transactions"
-          iconPath={ArrowIcon}
+          svg={ArrowIcon}
           iconAlt="Ícone de Transferências"
         />
         <NavItem
           text="Serviços"
           path="/services"
-          iconPath={ServicesIcon}
+          svg={ServicesIcon}
           iconAlt="Ícone de Serviços"
         />
         <NavItem
           text="Configurações"
           path="/config"
-          iconPath={ConfigIcon}
+          svg={ConfigIcon}
           iconAlt="Ícone de Configurações"
         />
       </StyledNav>
