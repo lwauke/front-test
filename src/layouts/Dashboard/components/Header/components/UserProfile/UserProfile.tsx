@@ -1,11 +1,14 @@
 import AvatarIcon from "../../../../../../assets/avatar-icon.svg";
+import { StyledUserName, UserProfileContainer } from "./styles";
 
 function UserProfile() {
   return (
-    <div>
+    <UserProfileContainer>
       <img src={AvatarIcon} alt="Ícone de avatar" />
-      <span>Bem vindo, user name</span>
-    </div>
+      <StyledUserName>
+        Bem vindo,&nbsp;<span className="user">user name</span>
+      </StyledUserName>
+    </UserProfileContainer>
   );
 }
 
