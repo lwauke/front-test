@@ -1,4 +1,9 @@
-import { StyledSidebar, StyledGreenLogo, StyledNav } from "./styles";
+import {
+  StyledSidebar,
+  StyledGreenLogo,
+  StyledNav,
+  StyledCloseBtn,
+} from "./styles";
 import NavItem from "./components/NavItem/NavItem";
 import HomeIcon from "../../../../assets/icons/home-icon.svg";
 import WalletIcon from "@/assets/icons/wallet-icon.svg";
@@ -7,9 +12,16 @@ import ServicesIcon from "@/assets/icons/services-icon.svg";
 import ConfigIcon from "@/assets/icons/config-icon.svg";
 import Help from "./components/Help/Help";
 
-function Sidebar() {
+interface SidebarProps {
+  open: boolean;
+  setIsOpen: (open: boolean) => void;
+}
+function Sidebar({ open, setIsOpen }: SidebarProps) {
   return (
-    <StyledSidebar>
+    <StyledSidebar open={open}>
+      <StyledCloseBtn href="/#" onClick={() => setIsOpen(false)}>
+        x
+      </StyledCloseBtn>
       <StyledGreenLogo />
       <StyledNav>
         <NavItem

@@ -1,13 +1,22 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import React from "react";
+import SVG from "react-inlinesvg";
 import SearchInput from "@/components/SearchInput/SearchInput";
-import { StyledHeader, StyledNotificationContainer } from "./styles";
+import {
+  StyledBurguerMenu,
+  StyledHeader,
+  StyledNotificationContainer,
+} from "./styles";
 import UserProfile from "./components/UserProfile/UserProfile";
 import NotificationIcon from "@/assets/icons/notification-icon.svg";
 import { logout } from "@/redux/authSlice";
+import BurguerMenu from "@/assets/icons/burguer-menu.svg";
 
-function Header() {
+interface HeaderProps {
+  setOpenSidebar: (open: boolean) => void;
+}
+function Header({ setOpenSidebar }: HeaderProps) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -17,21 +26,32 @@ function Header() {
     navigate("/login");
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    event.preventDefault();
-    if (event.key === "Enter") {
-      handleLogout();
-    }
-  };
+  const handleKeyDown =
+    (callback: () => void) => (event: React.KeyboardEvent) => {
+      event.preventDefault();
+      if (event.key === "Enter") {
+        callback();
+      }
+    };
+
   return (
     <StyledHeader>
+      <StyledBurguerMenu>
+        <SVG
+          width={24}
+          height={24}
+          src={BurguerMenu}
+          onClick={() => setOpenSidebar(true)}
+          onKeyDown={handleKeyDown(() => setOpenSidebar(true))}
+        />
+      </StyledBurguerMenu>
       <SearchInput onChange={() => {}} />
       <StyledNotificationContainer>
         <a
           href="/#"
           onClick={handleLogout}
           className="logout"
-          onKeyDown={handleKeyDown}
+          onKeyDown={handleKeyDown(handleLogout)}
         >
           Logout
         </a>

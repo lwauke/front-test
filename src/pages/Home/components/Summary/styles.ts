@@ -12,10 +12,10 @@ export const StyledSummary = styled.div`
   @media (max-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);
   }
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.breakpoints.lg}px) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media (max-width: 768px) {
+  @media (max-width: ${theme.breakpoints.md}px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (min-width: ${TABLET_BREAKPOINT}) {

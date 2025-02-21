@@ -19,7 +19,7 @@ export const StyledBgImage = styled.div`
   @media (min-width: 1400px) {
     width: 70%;
   }
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.breakpoints.lg}px) {
     display: none;
   }
   @media (max-width: 2200px) {
@@ -37,7 +37,7 @@ export const StyledWhiteLogo = styled.img.attrs({
   position: absolute;
   top: 42px;
   left: 32px;
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.breakpoints.lg}px) {
     display: none;
   }
 `;
@@ -46,7 +46,7 @@ export const StyledGreenLogo = styled.img.attrs({
   alt: "Logo do Meu Banco",
 })`
   margin: 16px 0 32px;
-  @media (min-width: 993px) {
+  @media (min-width: ${theme.breakpoints.lg}px) {
     display: none;
   }
 `;
