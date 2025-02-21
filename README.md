@@ -38,7 +38,10 @@ docker-compose up -d
 cd -
 ```
 
-Depois disso, acesse http://localhost:5173/
+Depois disso, acesse http://localhost:5173/ com algum dos usuários:
+
+- joao_silva 123456
+- maria_souza teste
 
 ## Build
 
