@@ -13,7 +13,6 @@ function ProtectedRoute({ children }: ProtectedRouteProps) {
   );
   const token = res?.token;
 
-  console.log("navigating", token);
   if (!token) {
     navigate("/login", { replace: true });
   }
