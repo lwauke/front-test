@@ -8,7 +8,9 @@ export const StyledCardsContainer = styled(StyledCard).attrs({
   as: "section",
 })`
   display: grid;
-  grid-template-columns: 240px 1fr;
+  @media (min-width: ${theme.breakpoints.md}px) {
+    grid-template-columns: 240px 1fr;
+  }
   grid-template-rows: auto auto 1fr;
   gap: 18px 60px;
   align-items: stretch;
@@ -18,7 +20,9 @@ export const StyledCardsContainer = styled(StyledCard).attrs({
 
 export const StyledSubtitle = styled.h3`
   font-size: 1.125em;
-  grid-column: 1 / 3;
+  @media (min-width: ${theme.breakpoints.md}px) {
+    grid-column: 1 / 3;
+  }
 `;
 
 export const StyledMonthlyLimit = styled(Flexbox).attrs({

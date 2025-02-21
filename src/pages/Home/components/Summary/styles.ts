@@ -18,6 +18,9 @@ export const StyledSummary = styled.div`
   @media (max-width: ${theme.breakpoints.md}px) {
     grid-template-columns: repeat(2, 1fr);
   }
+  @media (max-width: ${theme.breakpoints.sm}px) {
+    grid-template-columns: initial;
+  }
   @media (min-width: ${TABLET_BREAKPOINT}) {
     grid-column: 1 / 3;
   }
