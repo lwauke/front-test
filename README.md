@@ -6,7 +6,6 @@ Adicione as suas variáveis de ambiente
 
 ```bash
 cp .env{.example,}
-#altere como desejar
 ```
 
 ### Localmente:
@@ -38,15 +37,19 @@ docker-compose up -d
 cd -
 ```
 
-Depois disso, acesse http://localhost:5173/ com algum dos usuários:
+Depois disso, acesse http://localhost:5173/ pelo navegador com algum dos usuários:
 
 - joao_silva 123456
 - maria_souza teste
 
 ## Build
 
+WIP
+
+## Test
+
 ```bash
-npm run build
+npm test
 ```
 
 ## Funcionalidades
@@ -55,5 +58,5 @@ npm run build
 - Lembrar dispositivo usando LocalStorage
 - Armazenamento de credenciais em SessionStorage caso `lembrar dispositivo` não for `true`
 - Testes unitários
-- Responsividade na página de login
-- Responsividade na home até tablet(faltou um menu mobile para total responsividade)
+- Responsividade
+- Menu "hamburguer" mobile
