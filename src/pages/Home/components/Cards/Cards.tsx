@@ -11,9 +11,12 @@ import {
 import { Flexbox } from "@/styles/helpers/Flexbox";
 import { format } from "@/helpers/currency";
 
-function Cards() {
-  const limit = 3000;
-  const bill = 300;
+interface CardsProps {
+  limit: number;
+  bill: number;
+}
+
+function Cards({ limit, bill }: CardsProps) {
   return (
     <StyledCardsContainer>
       <StyledSubtitle>Cartões</StyledSubtitle>

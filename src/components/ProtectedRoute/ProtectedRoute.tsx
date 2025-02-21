@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Navigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 import { store } from "@/redux/store";
 
 type ProtectedRouteProps = {
@@ -7,12 +7,15 @@ type ProtectedRouteProps = {
 };
 
 function ProtectedRoute({ children }: ProtectedRouteProps) {
-  const { token } = useSelector(
+  const navigate = useNavigate();
+  const res = useSelector(
     (state: ReturnType<typeof store.getState>) => state?.auth,
   );
+  const token = res?.token;
 
+  console.log("navigating", token);
   if (!token) {
-    return <Navigate to="/login" replace />;
+    navigate("/login", { replace: true });
   }
 
   return children;

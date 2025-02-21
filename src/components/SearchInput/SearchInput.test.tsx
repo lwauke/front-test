@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { vi } from "vitest";
 import SearchInput from "./SearchInput";
 
 describe("SearchInput", () => {
@@ -9,7 +10,7 @@ describe("SearchInput", () => {
   });
 
   it("calls the onChange callback when input value changes", () => {
-    const onChangeMock = jest.fn();
+    const onChangeMock = vi.fn();
     render(<SearchInput onChange={onChangeMock} />);
     const searchInput = screen.getByRole("textbox") as HTMLInputElement;
     const inputValue = "test value";

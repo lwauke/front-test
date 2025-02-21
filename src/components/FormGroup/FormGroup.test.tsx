@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { vi } from "vitest";
 import FormGroup from "./FormGroup";
 
 describe("FormGroup", () => {
@@ -16,7 +17,7 @@ describe("FormGroup", () => {
   });
 
   it("calls the onChange callback when input value changes", () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     render(<FormGroup label="Test Label" type="text" onChange={onChange} />);
 
     const inputElement = screen.getByRole("textbox");

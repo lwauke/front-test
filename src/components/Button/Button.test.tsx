@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { vi } from "vitest";
 import Button from "./Button";
 
 describe("Button", () => {
@@ -11,7 +12,7 @@ describe("Button", () => {
   });
 
   it("calls the onClick function when clicked", () => {
-    const onClickMock = jest.fn();
+    const onClickMock = vi.fn();
     render(<Button text="Click me" onClick={onClickMock} />);
 
     const buttonElement = screen.getByText("Click me");

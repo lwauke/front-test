@@ -1,26 +1,47 @@
 import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { MemoryRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createMemoryRouter,
+  RouteObject,
+} from "react-router-dom";
 import configureStore from "redux-mock-store";
+import { vi } from "vitest";
 import ProtectedRoute from "./ProtectedRoute";
 
 const mockStore = configureStore([]);
+const mockedUseNavigate = vi.fn();
+
+vi.mock("react-router", async () => {
+  const mod = await vi.importActual("react-router-dom");
+  return {
+    ...mod,
+    useNavigate: () => mockedUseNavigate,
+  };
+});
+
+const mockRoutes: RouteObject[] = [
+  {
+    path: "/",
+    element: (
+      <ProtectedRoute>
+        <div data-testid="children">Test Children</div>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/login",
+    element: <div data-testid="login">login</div>,
+  },
+];
 
 describe("ProtectedRoute", () => {
   it("renders children when token is present", () => {
-    const store = mockStore({
-      auth: {
-        token: "exampleToken",
-      },
-    });
-
     render(
-      <Provider store={store}>
-        <MemoryRouter>
-          <ProtectedRoute>
-            <div data-testid="children">Test Children</div>
-          </ProtectedRoute>
-        </MemoryRouter>
+      <Provider store={mockStore({ token: "token" })}>
+        <RouterProvider
+          router={createMemoryRouter(mockRoutes, { initialEntries: ["/"] })}
+        />
       </Provider>,
     );
 
@@ -28,21 +49,15 @@ describe("ProtectedRoute", () => {
     expect(childrenElement).toBeInTheDocument();
   });
 
-  it("redirects to login page when token is not present", () => {
-    const store = mockStore({
-      auth: {
-        token: null,
-      },
-    });
-
+  it("redirect to login when token is null", () => {
     render(
-      <Provider store={store}>
-        <MemoryRouter initialEntries={["/"]}>
-          <ProtectedRoute>Test Children</ProtectedRoute>
-        </MemoryRouter>
+      <Provider store={mockStore({ token: null })}>
+        <RouterProvider
+          router={createMemoryRouter(mockRoutes, { initialEntries: ["/"] })}
+        />
       </Provider>,
     );
 
-    expect(screen.queryByText("Test Children")).not.toBeInTheDocument();
+    expect(mockedUseNavigate).toHaveBeenCalledWith("/login", { replace: true });
   });
 });

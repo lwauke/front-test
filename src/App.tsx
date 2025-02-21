@@ -14,47 +14,19 @@ function App() {
       <BrowserRouter>
         <GlobalStyle />
         <Routes>
-          <Route path="/" element={<DashboardLayout />}>
-            <Route
-              index
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/wallet"
-              element={
-                <ProtectedRoute>
-                  <Card>carteira</Card>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/transactions"
-              element={
-                <ProtectedRoute>
-                  <Card>transferências</Card>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/services"
-              element={
-                <ProtectedRoute>
-                  <Card>serviços</Card>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/config"
-              element={
-                <ProtectedRoute>
-                  <Card>configurações</Card>
-                </ProtectedRoute>
-              }
-            />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Home />} />
+            <Route path="/wallet" element={<Card>carteira</Card>} />
+            <Route path="/transactions" element={<Card>transferências</Card>} />
+            <Route path="/services" element={<Card>serviços</Card>} />
+            <Route path="/config" element={<Card>configurações</Card>} />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>
